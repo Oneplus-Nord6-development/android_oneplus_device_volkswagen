@@ -16,4 +16,7 @@
         <item>org.lineageos.settings.device.KeyHandler</item>
         <item>org.lineageos.lineageparts.gestures.KeyHandler</item>
     </string-array>
+
+    <integer name="config_deviceHardwareKeys">72</integer>
+    <integer name="config_deviceHardwareWakeKeys">72</integer>
 </resources>
