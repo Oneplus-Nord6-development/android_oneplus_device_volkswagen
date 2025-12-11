@@ -48,10 +48,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/nfc/libnfc-mtp-SN220.conf_24885:$(TARGET_COPY_OUT_ODM)/etc/libnfc-mtp-SN220.conf_24885 \
     $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf
 
-# PowerShare
-PRODUCT_PACKAGES += \
-    vendor.lineage.powershare-service.oplus
-
 # Regional properties
 REGIONAL_PROP_FILES := $(wildcard $(LOCAL_PATH)/properties/*/*.prop)
 
