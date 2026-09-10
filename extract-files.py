@@ -15,7 +15,7 @@ from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
 )
-
+ 
 namespace_imports = [
     'hardware/oplus',
     'hardware/qcom-caf/sm8750',
@@ -29,13 +29,13 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace(r'(fdSupport += )TRUE;', r'\1FALSE;'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
-    'odm/firmware/fastchg/23821/charging_hyper_mode_config.txt': blob_fixup()
-        .regex_replace(r"(PROJECT:=)23893", r"\g<1>23821"),
     'odm/lib64/libAlgoProcess.so': blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
     (
         'odm/lib64/libAncHumanSegFigureFusion.so',
         'odm/lib64/libEIS.so',
+        'odm/lib64/libFaceBeautyJni.so',
+        'odm/lib64/libFaceDistortionCorrection.so',
         'odm/lib64/libHIS.so',
         'odm/lib64/libOPAlgoCamAiBeautyFaceRetouchCn.so',
         'odm/lib64/libOPAlgoCamAiUnifySkin.so',
@@ -61,6 +61,7 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib64/libcamxcoreutils.so',
         'vendor/lib64/libcamxods.so',
+        'odm/bin/hw/vendor-oplus-hardware-touch-V2-hbp5-service',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
 }  # fmt: skip
