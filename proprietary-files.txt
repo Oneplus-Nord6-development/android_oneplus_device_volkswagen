@@ -1526,6 +1526,9 @@ odm/etc/wave_lib/F4/wave_he_short_f0_178_3.bin
 odm/etc/wave_lib/F4/wave_he_short_f0_178_4.bin
 odm/etc/wave_lib/F_MMAP.txt
 
+# Vibrator
+odm/lib64/libsivibrator.so:vendor/lib64/libsivibrator.so
+
 # Vibrator firmware
 odm/firmware/aw8697_haptic.bin
 odm/firmware/aw8697_haptic_170.bin
