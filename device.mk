@@ -34,7 +34,8 @@ PRODUCT_PACKAGES += \
     OPlusFrameworksResTarget \
     OPlusSettingsProviderResTarget \
     OPlusSettingsResTarget \
-    OPlusSystemUIResTarget
+    OPlusSystemUIResTarget \
+    WifiOverlayVolkswagen
 
 # NFC
 PRODUCT_COPY_FILES += \
@@ -72,11 +73,6 @@ PRODUCT_PACKAGES += \
     OplusHaptics
 
 $(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,LIVETAP_F0_CFLAG,-DLIVETAP_DEFAULT_F0=170)
-
-PRODUCT_COPY_FILES += \
-    vendor/qcom/opensource/vibrator/excluded-input-devices.xml:$(TARGET_COPY_OUT_VENDOR)/etc/excluded-input-devices.xml
-
-$(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8750-common/common.mk)
