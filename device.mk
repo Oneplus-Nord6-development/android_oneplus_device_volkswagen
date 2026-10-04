@@ -23,6 +23,11 @@ PRODUCT_COPY_FILES += \
 # Fingerprint
 $(call soong_config_set_bool,qtidisplay,oplus_udfps,true)
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/idc/oplus_fp_input.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/oplus_fp_input.idc \
+    $(LOCAL_PATH)/configs/idc/touchpanel.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/touchpanel.idc
+
 # LiveDisplay
 $(call soong_config_set_bool,OPLUS_LINEAGE_LIVEDISPLAY_HAL,ENABLE_AF,true)
 
